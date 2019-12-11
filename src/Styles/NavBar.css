@@ -1,0 +1,41 @@
+@import-normalize;
+
+.nav-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  height: 85px;
+  border-bottom: 1px solid black;
+}
+
+.top-links {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.top-links span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.logo {
+  width: 20%;
+  height: 100%;
+}
+
+/* Bottom Nav Bar Section */
+
+.nav-bottom {
+  height: 30px;
+  padding: 4px;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  width: 100%;
+}
+
+.nav-bottom span {
+  margin-right: 15px;
+}
+.nav-bottom span:first-child {
+  margin-left: 10px;
+}

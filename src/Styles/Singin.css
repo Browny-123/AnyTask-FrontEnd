@@ -1,0 +1,38 @@
+.signInContainer {
+  width: 100%;
+  height: calc(100vh - 115px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  text-align: center;
+  width: 300px;
+}
+
+.signInForm label {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.signInInput {
+  height: 30px;
+  border: 1px solid blue;
+  font-size: 18px;
+}
+
+.signInForm button {
+  margin: 15px auto;
+  width: 50%;
+  border-radius: 4px;
+  height: 50px;
+  width: 100px;
+  background-color: whitesmoke;
+  border: 3px solid blueviolet;
+  font-size: 16px;
+}

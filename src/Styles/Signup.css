@@ -1,0 +1,15 @@
+.signUpContainer {
+  width: 100%;
+  height: calc(100vh - 115px);
+  display: flex;
+  flex-direction: row;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signUpAddress,
+.signUpInfo {
+  display: flex;
+  width: 50%;
+  margin: 20px;
+  flex-direction: column;
+}
