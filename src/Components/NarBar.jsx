@@ -11,7 +11,6 @@ const NavBar = props => {
 
   const handleLogout = () => {
     api.post("logout").then(res => {
-      props.history.push("/");
       setUser(null);
     });
   };
