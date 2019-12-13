@@ -15,7 +15,7 @@ class GoogleMaps extends Component {
       lng: 2.31079
     },
     zoom: 15,
-    apiKey: "AIzaSyC1Ypw-6oKrZmPWzjuCRt4FLTtGddQ6Baw"
+    apiKey: process.env.GOOGLE_API_KEY
   };
 
   componentDidMount() {
