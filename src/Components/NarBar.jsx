@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "../Styles/NavBar.css";
-import apiHandler from "../Apihandler/ApiHandler";
 import { userContext } from "../Context/UserContext";
+import ApiHandler from "../Apihandler/ApiHandler";
+
+const api = new ApiHandler();
 const NavBar = props => {
   const user = useContext(userContext);
   const setUser = useContext(userContext);
 
   const handleLogout = () => {
-    apiHandler.post("logout").then(res => {
+    api.post("logout").then(res => {
       props.history.push("/");
       setUser(null);
     });
