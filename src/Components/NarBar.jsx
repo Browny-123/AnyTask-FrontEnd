@@ -1,9 +1,17 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "../Styles/NavBar.css";
+import apiHandler from "../Apihandler/ApiHandler";
 import { userContext } from "../Context/UserContext";
-const NavBar = () => {
-  const user = useContext(userContext);
+const NavBar = props => {
+  const { user, setUser } = useContext(userContext);
+
+  const handleLogout = () => {
+    apiHandler.post("/logout").then(res => {
+      props.history.push("/");
+      setUser(null);
+    });
+  };
 
   return (
     <nav className="nav-main">
@@ -26,9 +34,9 @@ const NavBar = () => {
               >
                 Profile
               </NavLink>
-              <NavLink to="/" className="nav-link" activeClassName="none">
+              <div onClick={handleLogout} className="nav-link">
                 Log Out
-              </NavLink>
+              </div>
             </div>
           ) : (
             <div>
