@@ -4,7 +4,8 @@ import "../Styles/NavBar.css";
 import apiHandler from "../Apihandler/ApiHandler";
 import { userContext } from "../Context/UserContext";
 const NavBar = props => {
-  const { user, setUser } = useContext(userContext);
+  const user = useContext(userContext);
+  const setUser = useContext(userContext);
 
   const handleLogout = () => {
     apiHandler.post("/logout").then(res => {
