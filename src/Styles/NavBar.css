@@ -42,3 +42,14 @@
 .nav-bottom span:first-child {
   margin-left: 10px;
 }
+
+.nav-link {
+  text-decoration: none;
+  margin-right: 7px;
+  color: black;
+}
+
+.active {
+  color: blue;
+  text-decoration: underline;
+}

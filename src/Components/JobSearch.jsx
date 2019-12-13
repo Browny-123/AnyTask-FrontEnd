@@ -36,16 +36,20 @@ export default function JobSearch() {
       {jobs.length === 0 ? (
         <SearchInfo clbk={handleCityInput} />
       ) : (
-        <div>
-          <div>
+        <div className="job-info-container">
+          <div className="main-job-info">
             <JobInfo jobInfo={jobs[0]} />
             <JobOwner jobOwner={jobs[0].ownerId} />
             <GoogleMaps address={jobs[0].location} />
           </div>
-          <div>
-            <button onClick={handleNoClick}>No</button>
-            <p>Would you like this Job?</p>
-            <button onClick={handleYesClick}>Yes</button>
+          <div className="button-options">
+            <button onClick={handleNoClick} className="choice-buttons">
+              No
+            </button>
+            <p className="choice">Would you like this Job?</p>
+            <button onClick={handleYesClick} className="choice-buttons">
+              Yes
+            </button>
           </div>
         </div>
       )}

@@ -37,3 +37,76 @@
   border-radius: 10px;
   border: none;
 }
+
+.job-info-container {
+  width: 100%;
+  height: calc(100vh - 115px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-job-info {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-options {
+  width: 60%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.choice {
+  font-size: 30px;
+}
+
+.choice-buttons {
+  height: 100px;
+  width: 175px;
+  font-size: 25px;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px grey;
+  border-radius: 10px;
+  border: none;
+}
+
+.job-location {
+  list-style: none;
+}
+.job-divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  height: 60%;
+  width: 30%;
+  border-right: 1px solid grey;
+}
+.jon-divider h1 {
+  margin: 0;
+}
+.job-divider p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.job-location li {
+  margin: 3px 0;
+}
+.job-location span {
+  font-weight: bold;
+}
+
+.job-divider span {
+  font-weight: bold;
+}
+
+.job-divider h2 {
+  margin: 5px 0;
+}

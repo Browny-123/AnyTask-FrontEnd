@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
 
 const api = axios.create();
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const element = <FontAwesomeIcon icon={faMapMarker} />;
+const AnyReactComponent = ({ element }) => <div>{element}</div>;
 
 class GoogleMaps extends Component {
   static defaultProps = {
@@ -39,7 +42,7 @@ class GoogleMaps extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: "200px", width: "300px" }}>
+      <div className="job-divider" style={{ height: "300px", width: "500px" }}>
         <GoogleMapReact
           bootstrapURLKeys={{
             key: "AIzaSyC1Ypw-6oKrZmPWzjuCRt4FLTtGddQ6Baw",
@@ -52,7 +55,7 @@ class GoogleMaps extends Component {
           <AnyReactComponent
             lat={this.props.center.lat}
             lng={this.props.center.lng}
-            text="Location"
+            element={element}
           />
         </GoogleMapReact>
       </div>

@@ -2,17 +2,34 @@ import React from "react";
 
 export default function JobInfo({ jobInfo }) {
   return (
-    <div>
+    <div className="job-divider">
       <h1>{jobInfo.jobDetails}</h1>
-      <p>Estimated Time for Completion: {jobInfo.timeNeeded} Minutes </p>
-      <p>Completion Amount: £{jobInfo.timeNeeded}</p>
-      <p>Start Date: {jobInfo.date}</p>
-      <p>Required Skills: {jobInfo.speciality}</p>
+      <p>
+        <span>Completion Time: </span> {jobInfo.timeNeeded} Minutes{" "}
+      </p>
+      <p>
+        <span>Completion Amount: </span> £{jobInfo.timeNeeded}
+      </p>
+      <p>
+        <span>Start Date: </span> {jobInfo.date}
+      </p>
+      <p>
+        <span>Required Skills: </span> {jobInfo.speciality}
+      </p>
       <h2>Job Location</h2>
-      <ul>
-        <li>Street: {jobInfo.location.street} </li>
-        <li>City: {jobInfo.location.city} </li>
-        <li>Country: {jobInfo.location.country} </li>
+      <ul className="job-location">
+        <li>
+          <span>Street: </span>
+          {jobInfo.location.street}
+        </li>
+        <li>
+          <span>City: </span>
+          {jobInfo.location.city}
+        </li>
+        <li>
+          <span>Country: </span>
+          {jobInfo.location.country}
+        </li>
       </ul>
     </div>
   );

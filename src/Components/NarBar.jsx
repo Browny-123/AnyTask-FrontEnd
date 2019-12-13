@@ -12,26 +12,54 @@ const NavBar = () => {
         <div className="top-links">
           {user.user ? (
             <div>
-              <NavLink to="/messages">Messages</NavLink>
-              <NavLink to="/profile">Profile</NavLink>
-              <span>Log Out</span>
+              <NavLink
+                to="/messages"
+                className="nav-link"
+                activeClassName="active"
+              >
+                Messages
+              </NavLink>
+              <NavLink
+                to="/profile"
+                className="nav-link"
+                activeClassName="active"
+              >
+                Profile
+              </NavLink>
+              <NavLink to="/" className="nav-link" activeClassName="none">
+                Log Out
+              </NavLink>
             </div>
           ) : (
             <div>
-              <NavLink to="/signup">Sign Up</NavLink>
-              <NavLink to="/signin">Log In</NavLink>
+              <NavLink to="/signup" className="nav-link">
+                Sign Up
+              </NavLink>
+              <NavLink to="/signin" className="nav-link">
+                Log In
+              </NavLink>
             </div>
           )}
         </div>
       </div>
       <div className="nav-bottom">
-        <NavLink exact to="/">
+        <NavLink exact to="/" className="nav-link" activeClassName="active">
           Home
         </NavLink>
-        <NavLink exact to="/createTask">
+        <NavLink
+          exact
+          to="/createTask"
+          className="nav-link"
+          activeClassName="active"
+        >
           Create Task
         </NavLink>
-        <NavLink exact to="/searchJobs">
+        <NavLink
+          exact
+          to="/searchJobs"
+          className="nav-link"
+          activeClassName="active"
+        >
           Search Task
         </NavLink>
       </div>
