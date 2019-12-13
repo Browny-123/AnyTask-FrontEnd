@@ -7,6 +7,8 @@ import Signin from "./Components/Signin";
 import Home from "./Components/Home";
 import { userContext } from "./Context/UserContext";
 import CreateTask from "./Components/CreateTask";
+import JobSearch from "./Components/JobSearch";
+import UserProfile from "./Components/UserProfile";
 
 function App() {
   const [user, setUser] = useState();
@@ -20,6 +22,8 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Route path="/signin" component={Signin} />
           <Route path="/createTask" component={CreateTask} />
+          <Route path="/searchJobs" component={JobSearch} />
+          <Route path="/profile" component={UserProfile} />
         </Switch>
       </userContext.Provider>
     </div>

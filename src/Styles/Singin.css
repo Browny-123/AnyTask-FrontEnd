@@ -1,38 +1,54 @@
 .signInContainer {
   width: 100%;
   height: calc(100vh - 115px);
+  text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.signInForm {
+.sign-in-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 400px;
+  border: 1px solid grey;
+  width: 50%;
   text-align: center;
-  width: 300px;
+  width: 400px;
+  margin-top: 50px;
+  border-radius: 15px;
 }
 
-.signInForm label {
+.sign-in-form label {
   margin: 10px 0;
   font-size: 20px;
 }
 
 .signInInput {
-  height: 30px;
-  border: 1px solid blue;
-  font-size: 18px;
+  width: 300px;
+  height: 40px;
+  font-size: 25px;
+  padding: 3px;
+  border-radius: 12px;
+  border: 1px solid grey;
+  text-align: center;
 }
 
-.signInForm button {
-  margin: 15px auto;
-  width: 50%;
-  border-radius: 4px;
-  height: 50px;
-  width: 100px;
+.sign-in-form button {
+  height: 40px;
+  width: 175px;
+  margin-top: 10px;
+  font-size: 20px;
   background-color: whitesmoke;
-  border: 3px solid blueviolet;
-  font-size: 16px;
+  box-shadow: 1px 1px grey;
+  border-radius: 10px;
+  border: none;
+  margin-top: 50px;
+}
+.sign-in-form button:active {
+  transform: scale(0.97);
+  border: none;
 }

@@ -6,7 +6,7 @@ import "../Styles/Singin.css";
 const api = new ApiHandler();
 
 const Signin = props => {
-  const { user, setUser } = useContext(userContext);
+  const { setUser } = useContext(userContext);
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const handleSubmit = async e => {
@@ -27,28 +27,27 @@ const Signin = props => {
   };
   return (
     <div className="signInContainer">
-      <form onSubmit={handleSubmit}>
-        <div className="signInForm">
-          <label className="label" htmlFor="email">
-            Email Address
-          </label>
-          <input
-            type="email"
-            name="email"
-            className="signInInput"
-            onChange={e => setLoginEmail(e.target.value)}
-          />
-          <label className="label" htmlFor="password">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            className="signInInput"
-            onChange={e => setLoginPassword(e.target.value)}
-          />
-          <button>Log in</button>
-        </div>
+      <h1>Please Sign into your account</h1>
+      <form onSubmit={handleSubmit} className="sign-in-form">
+        <label className="label" htmlFor="email">
+          Email Address
+        </label>
+        <input
+          type="email"
+          name="email"
+          className="signInInput"
+          onChange={e => setLoginEmail(e.target.value)}
+        />
+        <label className="label" htmlFor="password">
+          Password
+        </label>
+        <input
+          type="password"
+          name="password"
+          className="signInInput"
+          onChange={e => setLoginPassword(e.target.value)}
+        />
+        <button>Log in</button>
       </form>
     </div>
   );

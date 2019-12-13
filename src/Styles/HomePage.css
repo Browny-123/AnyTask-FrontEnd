@@ -1,0 +1,52 @@
+.home-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+.main-section {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  background-image: url("../images/City_Landscape_Background.jpg");
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: right;
+  opacity: 0.95;
+  border: 1.5px solid grey;
+}
+
+.main-title {
+  margin: 0;
+  color: black;
+  font-size: 50px;
+  text-shadow: 1px 1px white;
+}
+.second-main-section {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.main-divider {
+  width: 40%;
+  margin: 20px;
+}
+
+.main-divider img {
+  height: 90%;
+  width: 100%;
+  border-radius: 10px;
+}
+.main-divider p {
+  border-radius: 10px;
+  font-size: 22px;
+  background-color: #e4dfdf;
+  height: 40px;
+  padding-top: 5px;
+  color: black;
+}

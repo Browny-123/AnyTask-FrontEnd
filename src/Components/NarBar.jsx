@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../images/logo.png";
 import "../Styles/NavBar.css";
 import { userContext } from "../Context/UserContext";
 const NavBar = () => {
@@ -9,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className="nav-main">
       <div className="nav-top">
-        <img src={logo} alt="logo" className="logo" />
+        <h1 className="main-logo">AnyTask</h1>
         <div className="top-links">
           {user.user ? (
             <div>
@@ -32,7 +31,9 @@ const NavBar = () => {
         <NavLink exact to="/createTask">
           Create Task
         </NavLink>
-        <span>Search Task</span>
+        <NavLink exact to="/searchJobs">
+          Search Task
+        </NavLink>
       </div>
     </nav>
   );
