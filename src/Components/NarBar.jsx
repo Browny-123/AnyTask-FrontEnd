@@ -6,8 +6,7 @@ import ApiHandler from "../Apihandler/ApiHandler";
 
 const api = new ApiHandler();
 const NavBar = props => {
-  const user = useContext(userContext);
-  const setUser = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
 
   const handleLogout = () => {
     api.post("logout").then(res => {
@@ -20,7 +19,7 @@ const NavBar = props => {
       <div className="nav-top">
         <h1 className="main-logo">AnyTask</h1>
         <div className="top-links">
-          {user.user ? (
+          {user ? (
             <div>
               <NavLink
                 to="/messages"
