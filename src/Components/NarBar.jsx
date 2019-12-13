@@ -8,7 +8,7 @@ const NavBar = props => {
   const setUser = useContext(userContext);
 
   const handleLogout = () => {
-    apiHandler.post("/logout").then(res => {
+    apiHandler.post("logout").then(res => {
       props.history.push("/");
       setUser(null);
     });
