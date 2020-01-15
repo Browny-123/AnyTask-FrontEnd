@@ -1,0 +1,64 @@
+.view-jobs-container {
+  padding: 10px;
+  /* text-align: center;
+  display: flex; */
+  width: 100%;
+  background-color: #37393a;
+  text-align: center;
+}
+.view-jobs-header,
+.application-choice-success {
+  color: #fffc31;
+  font-size: 28px;
+}
+.view-jobs-container > p {
+  color: #f7fff7;
+}
+.job-details-container {
+  width: 100%;
+  background-color: #f7fff7;
+  margin: 10px 0;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.pick-winner-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.user-selection-info {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.user-selection-info > img {
+  border-radius: 10px;
+  margin: 10px 0;
+  height: 150px;
+  width: 200px;
+}
+
+.select-applicant {
+  height: 45px;
+  width: 150px;
+  margin-top: 5px;
+  background-color: #fffc31;
+  border-radius: 8px;
+  border: 2px solid #292f36;
+  font-size: 16px;
+}
+#successfull-applicant {
+  background-color: green;
+  color: white;
+  height: 45px;
+  width: 150px;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px;
+}

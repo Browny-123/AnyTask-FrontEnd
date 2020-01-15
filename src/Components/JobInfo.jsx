@@ -3,12 +3,12 @@ import React from "react";
 export default function JobInfo({ jobInfo }) {
   return (
     <div className="job-divider">
-      <h1>{jobInfo.jobDetails}</h1>
+      <h2>{jobInfo.jobDetails}</h2>
       <p>
         <span>Completion Time: </span> {jobInfo.timeNeeded} Minutes{" "}
       </p>
       <p>
-        <span>Completion Amount: </span> £{jobInfo.timeNeeded}
+        <span>Completion Amount: </span> £{jobInfo.reward}
       </p>
       <p>
         <span>Start Date: </span> {jobInfo.date}

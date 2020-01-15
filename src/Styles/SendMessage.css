@@ -1,0 +1,62 @@
+.send-message-container {
+  background-color: #37393a;
+  height: calc(100vh - 115px);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.send-message-title {
+  margin-top: -35px;
+  color: #fffc31;
+  text-align: center;
+}
+
+.send-message-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.send-message-form > textarea {
+  width: 50%;
+  font-size: 22px;
+  text-align: center;
+  height: 200px;
+}
+
+.send-message-form > button {
+  margin-top: 15px;
+  width: 120px;
+  height: 50px;
+  background-color: #fffc31;
+  border-radius: 8px;
+  border: 2px solid #292f36;
+  font-size: 14px;
+}
+.goto-messages_link {
+  text-decoration: none;
+  color: #fffc31;
+  font-size: 18px;
+}
+.close-button {
+  color: #f7fff7;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.success-message-container {
+  margin-top: 50px;
+}
+
+.close-button,
+.goto-messages_link:hover {
+  cursor: pointer;
+}

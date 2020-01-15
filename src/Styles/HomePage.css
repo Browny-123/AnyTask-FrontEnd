@@ -1,52 +1,44 @@
 .home-container {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
 }
 
 .main-section {
-  height: 600px;
+  height: calc(100vh - 115px);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: blue;
-  background-image: url("../images/City_Landscape_Background.jpg");
-  background-size: initial;
+  background-image: url("../Images/mountains.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   opacity: 0.95;
-  border: 1.5px solid grey;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #292f36;
 }
 
 .main-title {
-  margin: 0;
-  color: black;
-  font-size: 50px;
-  text-shadow: 1px 1px white;
-}
-.second-main-section {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: wrap;
+  margin: 0 auto;
+  color: #fffc31;
+  font-size: 65px;
+  width: 50%;
   text-align: center;
-  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 14px;
 }
 
-.main-divider {
-  width: 40%;
-  margin: 20px;
+.main-section > h2 {
+  color: #f7fff7;
+  font-size: 40px;
+  margin: 15px 0;
 }
 
-.main-divider img {
-  height: 90%;
-  width: 100%;
-  border-radius: 10px;
+.main-section > ul > li {
+  color: #f7fff7;
+  font-size: 20px;
+  margin: 5px 0;
 }
-.main-divider p {
-  border-radius: 10px;
-  font-size: 22px;
-  background-color: #e4dfdf;
-  height: 40px;
-  padding-top: 5px;
-  color: black;
+.instructions-list {
+  text-align: left;
 }

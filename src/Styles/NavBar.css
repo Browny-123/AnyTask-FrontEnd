@@ -1,5 +1,9 @@
 @import-normalize;
 
+.nav-main {
+  background-color: #292f36;
+}
+
 .nav-top {
   display: flex;
   width: 100%;
@@ -16,13 +20,20 @@
   display: flex;
   justify-content: flex-end;
 }
-.top-links span {
-  font-size: 20px;
-  margin-right: 10px;
-}
 .main-logo {
   font-size: 60px;
   width: 20%;
+  cursor: pointer;
+  color: white;
+}
+
+#log-out {
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+#log-out:hover {
+  cursor: pointer;
 }
 
 /* Bottom Nav Bar Section */
@@ -34,6 +45,18 @@
   font-size: 20px;
   width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.view-active-tasks {
+  margin-left: auto;
+  background: none;
+  border: none;
+}
+
+.view-active-tasks:hover {
+  cursor: pointer;
 }
 
 .nav-bottom span {
@@ -44,12 +67,58 @@
 }
 
 .nav-link {
+  color: #fffc31;
   text-decoration: none;
   margin-right: 7px;
-  color: black;
+  font-size: 18px;
 }
 
 .active {
-  color: blue;
+  color: #f7fff7;
   text-decoration: underline;
+  font-size: 19px;
+}
+
+/*  User Job List - Left hand side of the menu  */
+
+.user-job-list-container {
+  width: auto;
+  z-index: 1000;
+  position: fixed;
+  background-color: #37393a;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.user-job-list {
+  text-align: center;
+}
+
+.to-job-nav-link {
+  color: #fffc31;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.ind-job {
+  width: 100%;
+  overflow: hidden;
+  margin: 5px 0;
+  border: 1px solid #f7fff7;
+  padding: 2px;
+}
+.history-title {
+  text-decoration: underline;
+  font-size: 22px;
+  font-weight: bolder;
+  color: #c7d3dd;
+}
+
+.ind-job > ul > li {
+  color: #f7fff7;
+  font-size: 14px;
+}
+.ind-job > ul > li > span {
+  font-weight: bold;
 }

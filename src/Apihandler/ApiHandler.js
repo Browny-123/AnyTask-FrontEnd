@@ -10,7 +10,7 @@ class ApiHandler {
   post(route, info, config) {
     return this.api.post(route, info, config);
   }
-  get(route, query, config) {
+  get(route, query) {
     return this.api.get(route, query);
   }
 }

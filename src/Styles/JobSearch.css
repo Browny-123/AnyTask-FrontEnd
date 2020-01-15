@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #37393a;
 }
 
 .city-search {
@@ -14,8 +15,14 @@
   align-items: center;
 }
 
+.sign-in-toUse {
+  color: #fffc31;
+  font-size: 35px;
+}
+
 .city-search label {
   font-size: 18px;
+  color: white;
 }
 
 .search-input {
@@ -29,22 +36,26 @@
   text-align: center;
 }
 .search-btn {
-  height: 30px;
+  height: 45px;
   width: 150px;
   margin-top: 10px;
-  background-color: whitesmoke;
-  box-shadow: 1px 1px grey;
-  border-radius: 10px;
-  border: none;
+  background-color: #fffc31;
+  border-radius: 8px;
+  border: 2px solid #292f36;
+  font-size: 16px;
 }
-
+.search-btn,
+.choice-buttons:hover {
+  background-color: #f7fff7;
+  cursor: pointer;
+}
 .job-info-container {
   width: 100%;
   height: calc(100vh - 115px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #37393a;
 }
 
 .main-job-info {
@@ -63,16 +74,16 @@
 }
 .choice {
   font-size: 30px;
+  color: #f7fff7;
 }
 
 .choice-buttons {
   height: 100px;
   width: 175px;
   font-size: 25px;
-  background-color: whitesmoke;
-  box-shadow: 1px 1px grey;
+  background-color: #fffc31;
+  border: 1.5px solid #292f36;
   border-radius: 10px;
-  border: none;
 }
 
 .job-location {
@@ -86,27 +97,35 @@
   padding: 10px;
   height: 60%;
   width: 30%;
-  border-right: 1px solid grey;
-}
-.jon-divider h1 {
-  margin: 0;
 }
 .job-divider p {
   margin: 5px 0;
   font-size: 16px;
+  color: #f7fff7;
 }
 
 .job-location li {
   margin: 3px 0;
+  color: #f7fff7;
 }
+
+.job-divider > p > span,
 .job-location span {
   font-weight: bold;
+  color: #fffc31;
+  font-size: 16px;
 }
-
-.job-divider span {
-  font-weight: bold;
+.job-poster {
+  color: #fffc31 !important;
 }
-
 .job-divider h2 {
-  margin: 5px 0;
+  margin: 8px 0;
+  color: #f7fff7;
+}
+
+.job-search-user-pic {
+  height: 150px;
+  width: 150px;
+  margin: 10px auto;
+  border-radius: 11px;
 }

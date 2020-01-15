@@ -4,7 +4,6 @@ import JobInfo from "./JobInfo";
 import JobOwner from "./JobOwner";
 import GoogleMaps from "./GoogleMaps";
 import ApiHandler from "../Apihandler/ApiHandler";
-
 const api = new ApiHandler();
 
 export default function JobSearch() {

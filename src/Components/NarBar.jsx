@@ -1,28 +1,57 @@
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import "../Styles/NavBar.css";
-import { userContext } from "../Context/UserContext";
+import React, { useContext, useState, useEffect } from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import { UserContext } from "../auth/UserContext";
 import ApiHandler from "../Apihandler/ApiHandler";
+import ActiveTasks from "./ActiveTasks";
+import "../Styles/NavBar.css";
 
 const api = new ApiHandler();
-const NavBar = props => {
-  const { user, setUser } = useContext(userContext);
+const NavBar = () => {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const [hiddenMenu, setHiddenMenu] = useState(false);
+  const [userJobs, setUserJobs] = useState({});
+  const history = useHistory();
 
   const handleLogout = () => {
     api.post("logout").then(res => {
-      setUser(null);
+      setCurrentUser(null);
+      history.push("/");
     });
   };
+
+  const handleTaskClick = e => {
+    if (!hiddenMenu) {
+      api
+        .get("/activeTasks")
+        .then(dbRes => {
+          setUserJobs(dbRes.data);
+          setHiddenMenu(true);
+        })
+        .catch(err => console.log(err));
+    } else {
+      setHiddenMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => setHiddenMenu(false));
+  }, [hiddenMenu, history.location.pathname]);
+
+  useEffect(() => {
+    setHiddenMenu(false);
+  }, [history.location.pathname]);
 
   return (
     <nav className="nav-main">
       <div className="nav-top">
-        <h1 className="main-logo">AnyTask</h1>
+        <h1 className="main-logo" onClick={() => history.push("/")}>
+          AnyTask
+        </h1>
         <div className="top-links">
-          {user ? (
+          {currentUser ? (
             <div>
               <NavLink
-                to="/messages"
+                to={`/messages/user/${currentUser._id}`}
                 className="nav-link"
                 activeClassName="active"
               >
@@ -35,9 +64,9 @@ const NavBar = props => {
               >
                 Profile
               </NavLink>
-              <div onClick={handleLogout} className="nav-link">
+              <button onClick={handleLogout} className="nav-link" id="log-out">
                 Log Out
-              </div>
+              </button>
             </div>
           ) : (
             <div>
@@ -71,7 +100,20 @@ const NavBar = props => {
         >
           Search Task
         </NavLink>
+        {currentUser && (
+          <button
+            className="view-active-tasks nav-link"
+            onClick={handleTaskClick}
+          >
+            View Current Tasks
+          </button>
+        )}
       </div>
+      {!hiddenMenu ? null : (
+        <div className="user-job-list-container">
+          <ActiveTasks userJobs={userJobs} user={currentUser} />
+        </div>
+      )}
     </nav>
   );
 };

@@ -1,0 +1,47 @@
+.messages-container {
+  background-color: #37393a;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.messages-heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fffc31;
+  text-align: center;
+}
+
+.each-job-container {
+  background-color: #f7fff7;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 3px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.messages-send-link {
+  color: #fffc31;
+  width: 50px;
+  height: 30px;
+  padding: 3px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 12px;
+  background-color: #37393a;
+}
+
+.individual-messages > span {
+  font-weight: bold;
+  font-size: 12px;
+}
+.individual-messages > p {
+  font-size: 16px;
+  margin-left: auto;
+}
+.each-job-title > span {
+  font-weight: bold;
+}
