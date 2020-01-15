@@ -13,6 +13,7 @@ import Messages from "./Components/Messages";
 import { UserContext } from "./auth/UserContext";
 import SendMessage from "./Components/SendMesage";
 import ViewPostedJobs from "./Components/ViewPostedJobs";
+import { ProtectedRoute } from "./auth/ProtectedRoute";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -32,10 +33,13 @@ function App() {
             <Route path="/signin" component={Signin} />
             <Route path="/createTask" component={CreateTask} />
             <Route path="/searchJobs" component={JobSearch} />
-            <Route path="/profile" component={UserProfile} />
-            <Route path="/messages" component={Messages} />
-            <Route path="/send-message/:id" component={SendMessage} />
-            <Route path="/view-job-details/:id" component={ViewPostedJobs} />
+            <ProtectedRoute path="/profile" component={UserProfile} />
+            <ProtectedRoute path="/messages" component={Messages} />
+            <ProtectedRoute path="/send-message/:id" component={SendMessage} />
+            <ProtectedRoute
+              path="/view-job-details/:id"
+              component={ViewPostedJobs}
+            />
             <Route path="*" component={Error404} />
           </Switch>
         </React.Fragment>

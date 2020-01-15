@@ -9,7 +9,7 @@ const api = new ApiHandler();
 export default function Messages() {
   const { currentUser } = useContext(UserContext);
   const [messages, setMessages] = useState(null);
-  console.log("This is the messages Array", messages);
+
   useEffect(() => {
     async function getJobMessages() {
       try {
