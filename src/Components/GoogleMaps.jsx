@@ -11,7 +11,7 @@ export default function GoogleMapsHook(props) {
   useEffect(() => {
     setSource(`https://www.google.com/maps/embed/v1/place?key=${apiKey}
     &q=${modifiedAddress}`);
-  }, [props]);
+  }, [modifiedAddress]);
 
   return (
     <div>

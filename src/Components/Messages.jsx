@@ -14,7 +14,9 @@ export default function Messages() {
     async function getJobMessages() {
       try {
         const resultData = await api.get(`/messages/user/${currentUser._id}`);
-        setMessages(resultData.data);
+        if (resultData.data.length !== 0) {
+          setMessages(resultData.data);
+        }
       } catch (err) {
         console.log(err);
       }
@@ -45,8 +47,6 @@ export default function Messages() {
     <div className="messages-container">
       <h1 className="messages-heading">Messages</h1>
       {!messages ? (
-        <h2 className="messages-second-heading">...Loading</h2>
-      ) : messages.length === 0 ? (
         <h2 className="messages-second-heading">You have no Messages</h2>
       ) : (
         messages.map((info, i) => (

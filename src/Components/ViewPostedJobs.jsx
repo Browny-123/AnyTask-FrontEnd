@@ -20,7 +20,7 @@ export default function ViewPostedJobs(props) {
       }
     }
     getUserPostedjobs();
-  }, [result]);
+  }, [userId]);
 
   const handleChoiceSelection = async (selectedJobId, appliedUserId) => {
     try {

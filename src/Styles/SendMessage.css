@@ -57,6 +57,7 @@
 }
 
 .close-button,
-.goto-messages_link:hover {
+.goto-messages_link,
+.send-message-form > button:hover {
   cursor: pointer;
 }

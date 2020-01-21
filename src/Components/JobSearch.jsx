@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchInfo from "./SearchInfo";
+import JobSearchInformation from "./JobSearchInformation";
 import JobInfo from "./JobInfo";
 import JobOwner from "./JobOwner";
 import GoogleMaps from "./GoogleMaps";
@@ -33,7 +33,7 @@ export default function JobSearch() {
   return (
     <div>
       {jobs.length === 0 ? (
-        <SearchInfo clbk={handleCityInput} />
+        <JobSearchInformation clbk={handleCityInput} />
       ) : (
         <div className="job-info-container">
           <div className="main-job-info">

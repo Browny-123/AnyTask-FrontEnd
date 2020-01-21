@@ -81,13 +81,28 @@
 
 /*  User Job List - Left hand side of the menu  */
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255);
+}
+
 .user-job-list-container {
   width: auto;
+  min-height: calc(100vh - 115px);
   z-index: 1000;
   position: fixed;
   background-color: #37393a;
   padding: 5px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .user-job-list {

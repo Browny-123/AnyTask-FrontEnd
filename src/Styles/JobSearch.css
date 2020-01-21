@@ -22,7 +22,7 @@
 
 .city-search label {
   font-size: 18px;
-  color: white;
+  color: #fffc31;
 }
 
 .search-input {
@@ -44,8 +44,8 @@
   border: 2px solid #292f36;
   font-size: 16px;
 }
-.search-btn,
-.choice-buttons:hover {
+.choice-buttons,
+.search-btn:hover {
   background-color: #f7fff7;
   cursor: pointer;
 }

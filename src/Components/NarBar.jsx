@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { UserContext } from "../auth/UserContext";
 import ApiHandler from "../Apihandler/ApiHandler";
-import ActiveTasks from "./ActiveTasks";
+import ViewActiveTasksNavBar from "./ViewActiveTasksNavBar";
 import "../Styles/NavBar.css";
 
 const api = new ApiHandler();
@@ -111,7 +111,7 @@ const NavBar = () => {
       </div>
       {!hiddenMenu ? null : (
         <div className="user-job-list-container">
-          <ActiveTasks userJobs={userJobs} user={currentUser} />
+          <ViewActiveTasksNavBar userJobs={userJobs} user={currentUser} />
         </div>
       )}
     </nav>
