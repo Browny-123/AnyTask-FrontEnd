@@ -20,7 +20,7 @@ export default function ViewPostedJobs(props) {
       }
     }
     getUserPostedjobs();
-  }, [userId]);
+  }, [userId, result]);
 
   const handleChoiceSelection = async (selectedJobId, appliedUserId) => {
     try {
@@ -61,6 +61,15 @@ export default function ViewPostedJobs(props) {
     return null;
   };
 
+  const handleDeleteJob = async jobId => {
+    try {
+      const deletedJob = await Api.delete(`/deleteJob/${jobId}`);
+      setResult(deletedJob.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="view-jobs-container">
       {!result ? null : (
@@ -79,6 +88,12 @@ export default function ViewPostedJobs(props) {
             <h3>Job Details: {job.jobDetails}</h3>
             <p>Date: {job.date} </p>
             <p>{job.location.city} </p>
+            <button
+              className="delete-job-button"
+              onClick={() => handleDeleteJob(job._id)}
+            >
+              Delete Job Posting
+            </button>
             <div className="pick-winner-container">
               {job.appliedUsers.map((appliedUser, i) => (
                 <div key={i} className="user-selection-info">
